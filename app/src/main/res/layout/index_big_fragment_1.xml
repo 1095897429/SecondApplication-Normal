@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/search_part"
+        android:orientation="vertical"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp">
+
+        <TextView
+            android:id="@+id/text"
+            android:text="超速浏览器"
+            android:textSize="30sp"
+            android:textColor="#141029"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+
+        <TextView
+            android:id="@+id/search_text"
+            android:text="@string/index_hint_text"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="#B2B1BA"
+            android:drawableRight="@mipmap/index_icon_serch"
+            android:background="@drawable/index_search_bg"
+            android:layout_width="match_parent"
+            android:layout_height="39dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/par3"
+        android:layout_below="@+id/search_part"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager_gridView"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="154dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cool_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/webView_ll"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 标题 -->
+        <RelativeLayout
+            android:id="@+id/part1"
+            android:layout_width="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/center_title"
+                android:hint=""
+                android:textSize="16sp"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/font_color"
+                android:textColorHint="@color/font_color"
+                android:background="@drawable/shape_search_1_bg"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:progressDrawable="@drawable/pg"
+            android:visibility="gone"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/webView_addpart"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+        <!--<WebView-->
+        <!--android:id="@+id/webview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"></WebView>-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/part3"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center"
+            android:layout_height="50dp">
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:text=""
+                android:textSize="16sp"
+                android:gravity="center|left"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/font_color"
+                android:textColorHint="@color/font_color"
+                android:background="@drawable/shape_search_1_bg"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:layout_height="match_parent" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:text="取消"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            ></View>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
